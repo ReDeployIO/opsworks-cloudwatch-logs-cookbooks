@@ -37,10 +37,10 @@ log_stream_name = <%= node[:opsworks][:instance][:hostname] %>
 datetime_format = [%Y-%m-%d %H:%M:%S]
 log_group_name = <%= node[:opsworks][:stack][:name].gsub(' ','_') %>
 file = <%= node[:secure][:logfile] %>
-log_stream_name = <%= node[:opsworks][:instance][:hostname] %>
+log_stream_name = <%= node[:opsworks][:instance][:hostname] %>_secure
 
 [<%= node[:opsworks][:stack][:name] %>_audit]
 datetime_format = [%Y-%m-%d %H:%M:%S]
 log_group_name = <%= node[:opsworks][:stack][:name].gsub(' ','_') %>
 file = <%= node[:audit][:logfile] %>
-log_stream_name = <%= node[:opsworks][:instance][:hostname] %>
+log_stream_name = <%= node[:opsworks][:instance][:hostname] %>_audit
