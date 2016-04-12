@@ -1,0 +1,5 @@
+name             'logs'
+maintainer       'ReDeployIO'
+license          'Apache 2.0'
+description      'Installs and aggregates cloud watch logs'
+version          '1.0.0'
